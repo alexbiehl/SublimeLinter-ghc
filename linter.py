@@ -14,7 +14,7 @@ from SublimeLinter.lint import Linter, util
 from os.path import basename
 
 
-class Ghc(Linter):
+class StackGhc(Linter):
 
     """Provides an interface to stack ghc."""
 
