@@ -8,7 +8,7 @@
 # License: MIT
 #
 
-"""This module exports the Ghc plugin class."""
+"""This module exports the Stack Ghc plugin class."""
 
 from SublimeLinter.lint import Linter, util
 from os.path import basename
@@ -16,10 +16,10 @@ from os.path import basename
 
 class Ghc(Linter):
 
-    """Provides an interface to ghc."""
+    """Provides an interface to stack ghc."""
 
     syntax = ('haskell', 'haskell-sublimehaskell', 'literate haskell')
-    cmd = ('ghc', '-fno-code', '-Wall', '-Wwarn', '-fno-helpful-errors')
+    cmd = ('stack', 'ghc', '--', '-fno-code', '-Wall', '-Wwarn', '-fno-helpful-errors')
     regex = (
         r'^(?P<filename>.+):'
         r'(?P<line>\d+):(?P<col>\d+):'
